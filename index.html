@@ -1,367 +1,161 @@
-<!DOCTYPE HTML>
-<!--
-	Strongly Typed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Strongly Typed by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Insight Space — Decoding the Social Sciences</title>
+  <link rel="icon" href="images/favicon.png" />
+  <style>
+    /* -------- Branding variables -------- */
+    :root{
+      --bg:#ffffff;
+      --muted:#6b6b6b;
+      --text:#222;
+      --accent1:#c72dfb;
+      --accent2:#6e2efb;
+      --cta-shadow: 0 10px 28px rgba(0,0,0,0.12);
+      --maxw:1200px;
+    }
+    /* -------- Reset / base -------- */
+    *{box-sizing:border-box}
+    body{font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:var(--text); background:#fff; -webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    img{max-width:100%;height:auto;display:block}
 
-			<!-- Header -->
-				<section id="header">
-					<div class="container">
+    /* ===== HEADER ===== */
+    #site-header{position:fixed;left:0;right:0;top:0;background:var(--bg);z-index:1200;border-bottom:1px solid rgba(0,0,0,0.04)}
+    #site-header .wrap{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;gap:20px}
+    #site-header .logo{display:flex;align-items:center}
+    #site-header .logo img{height:110px;width:auto;display:block}
 
-						<!-- Logo -->
-							<h1 id="logo"><a href="index.html">Strongly Typed</a></h1>
-							<p>A responsive HTML5 site template. Manufactured by HTML5 UP.</p>
+    nav.mainnav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;align-items:center}
+    nav.mainnav a{display:inline-flex;align-items:center;justify-content:center;height:44px;padding:0 10px;text-decoration:none;font-weight:600;color:var(--text);border-radius:6px;transition:all .12s ease}
+    nav.mainnav a:hover{color:var(--accent2);transform:translateY(-2px)}
+    nav.mainnav a.button{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff;padding:10px 18px;box-shadow:var(--cta-shadow);font-weight:700}
+    nav.mainnav a.button.secondary{background:#f36f61}
+    nav.mainnav a:active, nav.mainnav a.active{color:var(--accent2)}
 
-						<!-- Nav -->
-							<nav id="nav">
-								<ul>
-									<li><a class="icon solid fa-home" href="index.html"><span>Introduction</span></a></li>
-									<li>
-										<a href="#" class="icon fa-chart-bar"><span>Dropdown</span></a>
-										<ul>
-											<li><a href="#">Lorem ipsum dolor</a></li>
-											<li><a href="#">Magna phasellus</a></li>
-											<li><a href="#">Etiam dolore nisl</a></li>
-											<li>
-												<a href="#">Phasellus consequat</a>
-												<ul>
-													<li><a href="#">Magna phasellus</a></li>
-													<li><a href="#">Etiam dolore nisl</a></li>
-													<li><a href="#">Phasellus consequat</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Veroeros feugiat</a></li>
-										</ul>
-									</li>
-									<li><a class="icon solid fa-cog" href="left-sidebar.html"><span>Left Sidebar</span></a></li>
-									<li><a class="icon solid fa-retweet" href="right-sidebar.html"><span>Right Sidebar</span></a></li>
-									<li><a class="icon solid fa-sitemap" href="no-sidebar.html"><span>No Sidebar</span></a></li>
-								</ul>
-							</nav>
+    /* make sure header height is predictable */
+    body{padding-top: calc(66px + 24px)} /* logo height + vertical breathing */
 
-					</div>
-				</section>
+    /* ===== HERO ===== */
+    .hero{max-width:var(--maxw);margin:0 auto;position:relative}
+    .hero .banner{
+      height:420px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      background:linear-gradient(180deg, rgba(25,25,25,0.18), rgba(25,25,25,0.18)), url('images/hero.jpg') center/cover no-repeat;
+      color:#fff;
+      padding:40px 20px;
+    }
+    .hero h1{font-size:40px;letter-spacing:6px;margin:0 0 8px;text-transform:uppercase}
+    .hero p.lead{margin:0 0 20px;color:rgba(255,255,255,0.85);font-size:18px}
 
-			<!-- Features -->
-				<section id="features">
-					<div class="container">
-						<header>
-							<h2>Gentlemen, behold! This is <strong>Strongly Typed</strong>!</h2>
-						</header>
-						<div class="row aln-center">
-							<div class="col-4 col-6-medium col-12-small">
+    .hero .ctas{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;background:#eee;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:700;color:var(--text)}
+    .btn.primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff;box-shadow:var(--cta-shadow)}
+    .btn.ghost{background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.06)}
 
-								<!-- Feature -->
-									<section>
-										<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-										<header>
-											<h3>Okay, so what is this?</h3>
-										</header>
-										<p>This is <strong>Strongly Typed</strong>, a free, fully responsive site template
-										by <a href="http://html5up.net">HTML5 UP</a>. Free for personal and commercial use under the
-										<a href="http://html5up.net/license">CCA 3.0 license</a>.</p>
-									</section>
+    /* ===== SECTIONS ===== */
+    .container{max-width:var(--maxw);margin:48px auto;padding:0 20px}
+    .title{font-size:28px;margin:0 0 18px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;border-radius:8px;padding:18px;border:1px solid rgba(0,0,0,0.04);box-shadow:0 6px 18px rgba(0,0,0,0.03)}
+    .card h3{margin:0 0 10px}
+    .muted{color:var(--muted)}
 
-							</div>
-							<div class="col-4 col-6-medium col-12-small">
+    /* article list */
+    .articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .article{padding:16px;border-radius:8px;border:1px solid rgba(0,0,0,0.04)}
 
-								<!-- Feature -->
-									<section>
-										<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-										<header>
-											<h3>Nice! What is HTML5 UP?</h3>
-										</header>
-										<p><a href="http://html5up.net">HTML5 UP</a> is a side project of <a href="http://twitter.com/ajlkn">AJ’s</a> (= me).
-										I started it as a way to both test my responsive tools and sharpen up my coding
-										and design skills a bit.</p>
-									</section>
+    /* footer */
+    footer.site-footer{text-align:center;padding:28px 20px;color:var(--muted);border-top:1px solid rgba(0,0,0,0.04)}
 
-							</div>
-							<div class="col-4 col-6-medium col-12-small">
+    /* responsive */
+    @media (max-width:980px){.grid,.articles-grid{grid-template-columns:repeat(2,1fr)} .hero .banner{height:360px} .hero h1{font-size:34px}}
+    @media (max-width:640px){.grid,.articles-grid{grid-template-columns:1fr} #site-header .wrap{padding:10px} #site-header .logo img{height:54px} body{padding-top:74px} .hero .banner{height:300px} .hero h1{font-size:26px;letter-spacing:2px}}
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header id="site-header" role="banner" aria-label="Site header">
+    <div class="wrap">
+      <div class="logo">
+        <a href="index.html" aria-label="Insight Space home"><img src="images/logo-insight.png" alt="Insight Space logo"></a>
+      </div>
 
-								<!-- Feature -->
-									<section>
-										<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>What's this built with?</h3>
-										</header>
-										<p><strong>Responsive Tools</strong> is a simple set of tools for building responsive
-										sites and apps. All of my templates at <a href="http://html5up.net">HTML5 UP</a> are built using these tools.</p>
-									</section>
+      <nav class="mainnav" role="navigation" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html" class="button secondary">Explore Courses</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.youtube.com/@insightspaceindia" target="_blank" rel="noopener" class="button">YouTube</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-							</div>
-							<div class="col-12">
-								<ul class="actions">
-									<li><a href="#" class="button icon solid fa-file">Tell Me More</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
+  <!-- HERO -->
+  <main class="hero" role="main">
+    <section class="banner" id="banner">
+      <div>
+        <h1>Decoding the Social Sciences</h1>
+        <p class="lead">Insight Space — coaching, short explainers, and conceptual clarity in sociology.</p>
+        <div class="ctas">
+          <a class="btn primary" href="https://www.youtube.com/@insightspaceindia" target="_blank" rel="noopener">Visit YouTube Channel</a>
+          <a class="btn" href="courses.html">Explore Courses</a>
+        </div>
+      </div>
+    </section>
 
-			<!-- Banner -->
-				<section id="banner">
-					<div class="container">
-						<p>Use this space for <strong>profound thoughts</strong>.<br />
-						Or an enormous ad. Whatever.</p>
-					</div>
-				</section>
+    <!-- Offerings -->
+    <section class="container" aria-labelledby="offerings">
+      <h2 id="offerings" class="title">Our Offerings</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>UPSC Sociology Foundation</h3>
+          <p class="muted">Paper I & II — Concepts, theory, and answer practice. Live online batches and recorded materials.</p>
+        </div>
+        <div class="card">
+          <h3>UGC NET / JRF Coaching</h3>
+          <p class="muted">Focused modules, past papers, and mock tests — mentoring for conceptual depth.</p>
+        </div>
+        <div class="card">
+          <h3>School & College Social Science</h3>
+          <p class="muted">Activity-driven coaching to build sociological thinking. Offline program coming soon.</p>
+        </div>
+      </div>
+    </section>
 
-			<!-- Main -->
-				<section id="main">
-					<div class="container">
-						<div class="row">
+    <!-- Articles -->
+    <section class="container" aria-labelledby="articles">
+      <h2 id="articles" class="title">Articles & Reflections</h2>
+      <div class="articles-grid">
+        <article class="article">
+          <h3><a href="articles/article1.html">Why Rebellion Is a Social Necessity</a></h3>
+          <p class="muted">Rebellion isn’t chaos — it’s the heartbeat of change. A short reflection on conflict and renewal.</p>
+        </article>
 
-							<!-- Content -->
-								<div id="content" class="col-8 col-12-medium">
+        <article class="article">
+          <h3><a href="articles/article2.html">How Your Job Rewires Your Personality</a></h3>
+          <p class="muted">Work shapes temper and identity. A sociological look at how roles refashion people.</p>
+        </article>
 
-									<!-- Post -->
-										<article class="box post">
-											<header>
-												<h2><a href="#">I don’t want to say <strong>it’s the aliens</strong> ...<br />
-												but it’s the aliens.</a></h2>
-											</header>
-											<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-											<h3>I mean isn't it possible?</h3>
-											<p>Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit
-											ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-											sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
-											in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-											magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
-											consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-											justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-											mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique.
-											Curabitur leo nibh, rutrum eu malesuada in tristique.</p>
-											<ul class="actions">
-												<li><a href="#" class="button icon solid fa-file">Continue Reading</a></li>
-											</ul>
-										</article>
+        <article class="article">
+          <h3><a href="articles.html">More essays →</a></h3>
+          <p class="muted">Browse more short reads connecting sociological ideas to everyday life.</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-									<!-- Post -->
-										<article class="box post">
-											<header>
-												<h2><a href="#">By the way, many thanks to <strong>regularjane</strong>
-												for these awesome demo photos</a></h2>
-											</header>
-											<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-											<h3>You should probably check out her work</h3>
-											<p>Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit
-											ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-											sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
-											in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-											consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-											in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-											magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
-											consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-											justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-											mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique.
-											Curabitur leo nibh, rutrum malesuada.</p>
-											<p>Erat lorem ipsum veroeros consequat magna tempus lorem ipsum consequat
-											Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit ligula
-											vel quam viverra sit amet mollis tortor congue. Sed quis mauris sit amet
-											magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada in,
-											tristique at erat. Curabitur leo nibh, rutrum eu malesuada in, tristique
-											at erat lorem ipsum dolor sit amet lorem ipsum sed consequat magna
-											tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros consequat
-											magna tempus.</p>
-											<ul class="actions">
-												<li><a href="#" class="button icon solid fa-file">Continue Reading</a></li>
-											</ul>
-										</article>
-
-								</div>
-
-							<!-- Sidebar -->
-								<div id="sidebar" class="col-4 col-12-medium">
-
-									<!-- Excerpts -->
-										<section>
-											<ul class="divided">
-												<li>
-
-													<!-- Excerpt -->
-														<article class="box excerpt">
-															<header>
-																<span class="date">July 30</span>
-																<h3><a href="#">Just another post</a></h3>
-															</header>
-															<p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
-															suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
-														</article>
-
-												</li>
-												<li>
-
-													<!-- Excerpt -->
-														<article class="box excerpt">
-															<header>
-																<span class="date">July 28</span>
-																<h3><a href="#">And another post</a></h3>
-															</header>
-															<p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
-															suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
-														</article>
-
-												</li>
-												<li>
-
-													<!-- Excerpt -->
-														<article class="box excerpt">
-															<header>
-																<span class="date">July 24</span>
-																<h3><a href="#">One more post</a></h3>
-															</header>
-															<p>Lorem ipsum dolor odio facilisis convallis. Etiam non nunc vel est
-															suscipit convallis non id orci lorem ipsum sed magna consequat feugiat lorem dolore.</p>
-														</article>
-
-												</li>
-											</ul>
-										</section>
-
-									<!-- Highlights -->
-										<section>
-											<ul class="divided">
-												<li>
-
-													<!-- Highlight -->
-														<article class="box highlight">
-															<header>
-																<h3><a href="#">Something of note</a></h3>
-															</header>
-															<a href="#" class="image left"><img src="images/pic06.jpg" alt="" /></a>
-															<p>Phasellus sed laoreet massa id justo mattis pharetra. Fusce suscipit ligula vel quam
-															viverra sit amet mollis tortor congue magna lorem ipsum dolor et quisque ut odio facilisis
-															convallis. Etiam non nunc vel est suscipit convallis non id orci. Ut interdum tempus
-															facilisis convallis. Etiam non nunc vel est suscipit convallis non id orci.</p>
-															<ul class="actions">
-																<li><a href="#" class="button icon solid fa-file">Learn More</a></li>
-															</ul>
-														</article>
-
-												</li>
-												<li>
-
-													<!-- Highlight -->
-														<article class="box highlight">
-															<header>
-																<h3><a href="#">Something of less note</a></h3>
-															</header>
-															<a href="#" class="image left"><img src="images/pic07.jpg" alt="" /></a>
-															<p>Phasellus sed laoreet massa id justo mattis pharetra. Fusce suscipit ligula vel quam
-															viverra sit amet mollis tortor congue magna lorem ipsum dolor et quisque ut odio facilisis
-															convallis. Etiam non nunc vel est suscipit convallis non id orci. Ut interdum tempus
-															facilisis convallis. Etiam non nunc vel est suscipit convallis non id orci.</p>
-															<ul class="actions">
-																<li><a href="#" class="button icon solid fa-file">Learn More</a></li>
-															</ul>
-														</article>
-
-												</li>
-											</ul>
-										</section>
-
-								</div>
-
-						</div>
-					</div>
-				</section>
-
-			<!-- Footer -->
-				<section id="footer">
-					<div class="container">
-						<header>
-							<h2>Questions or comments? <strong>Get in touch:</strong></h2>
-						</header>
-						<div class="row">
-							<div class="col-6 col-12-medium">
-								<section>
-									<form method="post" action="#">
-										<div class="row gtr-50">
-											<div class="col-6 col-12-small">
-												<input name="name" placeholder="Name" type="text" />
-											</div>
-											<div class="col-6 col-12-small">
-												<input name="email" placeholder="Email" type="text" />
-											</div>
-											<div class="col-12">
-												<textarea name="message" placeholder="Message"></textarea>
-											</div>
-											<div class="col-12">
-												<a href="#" class="form-button-submit button icon solid fa-envelope">Send Message</a>
-											</div>
-										</div>
-									</form>
-								</section>
-							</div>
-							<div class="col-6 col-12-medium">
-								<section>
-									<p>Erat lorem ipsum veroeros consequat magna tempus lorem ipsum consequat Phaselamet
-									mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique. Curabitur
-									leo nibh, rutrum eu malesuada.</p>
-									<div class="row">
-										<div class="col-6 col-12-small">
-											<ul class="icons">
-												<li class="icon solid fa-home">
-													1234 Somewhere Road<br />
-													Nashville, TN 00000<br />
-													USA
-												</li>
-												<li class="icon solid fa-phone">
-													(000) 000-0000
-												</li>
-												<li class="icon solid fa-envelope">
-													<a href="#">info@untitled.tld</a>
-												</li>
-											</ul>
-										</div>
-										<div class="col-6 col-12-small">
-											<ul class="icons">
-												<li class="icon brands fa-twitter">
-													<a href="#">@untitled</a>
-												</li>
-												<li class="icon brands fa-instagram">
-													<a href="#">instagram.com/untitled</a>
-												</li>
-												<li class="icon brands fa-dribbble">
-													<a href="#">dribbble.com/untitled</a>
-												</li>
-												<li class="icon brands fa-facebook-f">
-													<a href="#">facebook.com/untitled</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</section>
-							</div>
-						</div>
-					</div>
-					<div id="copyright" class="container">
-						<ul class="links">
-							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</div>
-				</section>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Insight Space — Decoding the Social Sciences</p>
+    </div>
+  </footer>
+</body>
 </html>
