@@ -230,5 +230,27 @@
       </div></footer>
     <section class="u-backlink u-clearfix u-grey-80"> This website was created with <a href="https://nicepage.com">Nicepage</a>
     </section>
+<script>
+  // ensure external links (YouTube, social) open in new tab on mobile and desktop
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[href^="https://"]').forEach(function(a){
+      // only target absolute external URLs outside your site
+      try {
+        var url = new URL(a.href);
+        if (url.hostname !== location.hostname) {
+          a.setAttribute('target','_blank');
+          a.setAttribute('rel','noopener noreferrer');
+          a.addEventListener('click', function (ev) {
+            // try to open in new tab and stop menu handlers from blocking it
+            window.open(a.href, '_blank');
+            ev.stopPropagation();
+            // let link default be prevented so we don't duplicate navigation
+            ev.preventDefault();
+          });
+        }
+      } catch(e) {}
+    });
+  });
+</script>
   
 </body></html>
